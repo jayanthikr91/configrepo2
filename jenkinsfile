@@ -1,7 +1,8 @@
 node 
 {
-   def mvnHome
-   checkout scm;
+ checkout scm;
+  def mvnHome
+  
    def url =readProperties  file: 'propsfolder/properties.txt'
    stage('checkout') 
    { 
