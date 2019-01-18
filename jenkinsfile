@@ -20,10 +20,10 @@ node
      sh "${Var2}"
    }
   stage('input'){
-input message:'skip tomcat installation ?',ok:'No'
+input message:'skip tomcat installation ?',ok:'yes'
   }
   stage('sample')
  {
- ech0 "sdfghjk"
+ echo "sdfghjk"
  }
 }
