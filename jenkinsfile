@@ -19,8 +19,11 @@ node
    echo "${Var2}"
      sh "${Var2}"
    }
-  stage('deploy'){
- sh "docker run -d --name tomcat -p 9000:8080 tomcat"
+  stage('input'){
+input message:'skip tomcat installation ?',ok:'No'
   }
-  
+  stage('sample')
+ {
+ ech0 "sdfghjk"
+ }
 }
