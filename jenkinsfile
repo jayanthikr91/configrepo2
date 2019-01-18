@@ -35,4 +35,8 @@ node
 	  sh "docker run -d --name tom -p 9001:8080 tomcat"
         }
     }	
+    stage('sucess')
+    {
+    echo "dfmsdfghj"
+    }
 }
