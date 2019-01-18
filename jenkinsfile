@@ -19,11 +19,20 @@ node
    echo "${Var2}"
      sh "${Var2}"
    }
-  stage('input'){
-input message:'skip tomcat installation ?',ok:'yes'
-  }
-  stage('sample')
- {
- echo "sdfghjk"
- }
+  
+  stage('tomcat') {
+	def Install = false;
+	try {
+		input message: 'Install?', ok: 'Install'
+		Install = true
+		} catch (err) {
+	Install = false
+	
+	}
+	
+       if (Install){   
+	 
+	  sh "docker run -d --name tom -p 9001:8080 tomcat"
+        }
+    }	
 }
