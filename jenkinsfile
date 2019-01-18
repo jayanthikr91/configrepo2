@@ -20,7 +20,7 @@ node
      sh "${Var2}"
    }
   stage('deploy'){
-  docker run --name tomcat -p 9000:8001 tomcat
+ sh "docker run --name tomcat -p 9000:8001 tomcat"
   }
   
 }
